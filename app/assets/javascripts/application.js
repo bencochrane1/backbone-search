@@ -15,6 +15,12 @@
 //= require handlebars.runtime
 //= require_tree ./models
 //= require_tree ./collections
+//= require_tree ./routers
 //= require_tree .
 
+var App = App || {}
 
+
+$(function() {
+    Backbone.history.start();    
+});
