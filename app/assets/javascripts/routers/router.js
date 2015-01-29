@@ -13,6 +13,7 @@ App.Router = Backbone.Router.extend({
             var peopleView = new App.PeopleView( {collection: peopleCollection } );
             $("#container").html(peopleView.render().el);
         });
+
     }
 });
 
