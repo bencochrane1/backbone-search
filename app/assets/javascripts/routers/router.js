@@ -8,8 +8,11 @@ App.Router = Backbone.Router.extend({
     },
 
     homePage: function() {
-        // var peopleView = new App.PeopleView({})
-        console.log("it works")
+        var peopleCollection = new App.People();
+        peopleCollection.fetch().then(function() {
+            var peopleView = new App.PeopleView( {collection: peopleCollection } );
+            $("#container").html(peopleView.render().el);
+        });
     }
 });
 
